@@ -14,7 +14,15 @@
  * console.log(numbers); // [5]
  */
 function returnNumbers(start, finish) {
-
+    let numbers = [];
+    if (start === finish) {
+        return [start];
+    }
+    while (start <= finish) {
+        numbers.push(start);
+        start++;
+    }
+    return numbers;
 }
 
 
@@ -30,7 +38,11 @@ function returnNumbers(start, finish) {
  */
 
 function sumArray(array) {
-
+    let sum = 0;
+    for (let num of array) {
+        sum += num;
+    }
+    return sum;
 }
 
 /**
@@ -45,5 +57,6 @@ function sumArray(array) {
  * const updatedArray = pushElement(myArray, 4); // updatedArray will be [1, 2, 3, 4]
  */
 function pushElement(arr, elem) {
-    
+    arr.push(elem);
+    return arr;
 }
